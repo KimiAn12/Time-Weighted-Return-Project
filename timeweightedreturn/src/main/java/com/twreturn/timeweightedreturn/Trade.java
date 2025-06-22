@@ -1,7 +1,6 @@
 package com.twreturn.timeweightedreturn;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,9 +22,20 @@ public class Trade {
     @ManyToOne
     private Portfolio portfolio;
 
-    
-    // Getters and setters
+    // No-arg constructor (required by JPA)
+    public Trade() { }
 
+    // All-args constructor
+    public Trade(String asset, String type, double quantity, double price, LocalDate tradeDate, Portfolio portfolio) {
+        this.asset = asset;
+        this.type = type;
+        this.quantity = quantity;
+        this.price = price;
+        this.tradeDate = tradeDate;
+        this.portfolio = portfolio;
+    }
+
+    // Getters and setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
