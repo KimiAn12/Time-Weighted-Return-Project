@@ -22,4 +22,28 @@ public class Trade {
 
     @ManyToOne
     private Portfolio portfolio;
+
+    
+    // Getters and setters
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getAsset() { return asset; }
+    public void setAsset(String asset) { this.asset = asset; }
+
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
+
+    public double getQuantity() { return quantity; }
+    public void setQuantity(double quantity) { this.quantity = quantity; }
+
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
+
+    public LocalDate getTradeDate() { return tradeDate; }
+    public void setTradeDate(LocalDate tradeDate) { this.tradeDate = tradeDate; }
+
+    public Portfolio getPortfolio() { return portfolio; }
+    public void setPortfolio(Portfolio portfolio) { this.portfolio = portfolio; }
 }
